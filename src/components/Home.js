@@ -12,11 +12,6 @@ function Home() {
       <Container>
         <Row>
           <Col className="columnWithMyFace" sm={2}>
-            <img
-              className="picOfMyFace"
-              src="./myface.png"
-              alt="profile picture"
-            />
             <Card border="grey" style={{ width: 189 }}>
               <Link>
                 <GoMarkGithub
