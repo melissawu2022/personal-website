@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+//import { Link, animateScroll as scroll } from "react-scroll";
+import NavbarComponent from "./components/NavbarComponent";
+import { Switch, Route } from "react-router-dom";
+import Home from "./components/Home";
+import Education from "./components/Education";
+import WorkExperience from "./components/WorkExperience";
+import SideProjects from "./components/SideProjects";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NavbarComponent />
+      <Switch>
+        <Route path="/" exact component={Home} />
+        <Route path="/Education" component={Education} />
+        <Route path="/WorkExperience" component={WorkExperience} />
+        <Route path="/SideProjects" component={SideProjects} />
+      </Switch>
     </div>
   );
 }
